@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CV page</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			margin: 0;
+			font-family: 'Montserrat', sans-serif;
+		}
+		#header{
+			width: 100%;
+			height: 27rem;
+			background:#2079c7;
+			text-align: center;
+			padding: 1rem;
+		}
+		#image{
+			width: 12rem;
+			border-radius: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			
+		}
+		h1{
+			color: white;
+			margin: 0;
+		}
+		h3{
+			color: white;
+			font-size: 0.8rem;
+			vertical-align: middle;
+			margin: 0;
+			padding: 1rem;
+		}
+		h2{
+			color: #2079c7;
+			margin:0;
+			font-size: 18px;
+		}
+		.address{
+			width:30%;
+			margin: 0 3rem;
+		}
+		#address-paragraph{
+			font-size: 0.8rem;
+			margin: 0;
+			padding: 0;
+			color: white;
+			margin-bottom: 1rem;
+		}
+		button{
+			padding:0.3rem;
+			margin:auto;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button a { 
+			text-decoration: none;
+		}
+		button:hover{
+			background: white;
+		}
+		.empty{
+			width: 10%;
+		}
+		.container{
+			width : 100%;
+		}
+		#experience-container{
+			width: 50%;
+		}
+		.content{
+			padding: 1rem;
+			line-height: 1.4rem; 
+		}
+		.container2{
+			width: 30%;;
+		}
+		#education{
+			width: 50%;
+		}
+		.skills{
+			width: 30%;
+			padding: 1.6rem;
+			line-height: 1.4rem; 
+		}
+		.contact-form{
+			padding: 1rem;
+			margin: auto;
+			width: 25rem;
+		}
+		.contact-form__title{
+		text-align: center;
+		font-size: 1.8rem;
+		color: #2079c7;
+		}
+		.contact-form label{
+		font-weight: bold;
+		}
+		.contact-form label,
+		.contact-form input{
+		display: block;
+		margin-top: 1rem;
+		width: 100%;
+		}
+		.contact-form input{
+			border:1px solid #ccc;
+			padding: 0.4rem; 
+		}
+		.contact-form input:focus,
+		.contact-form select:focus{
+		outline: none;
+		background: #2079c7;
+		border-color: #2079c7;
+}
+		#message{
+			height: 9.4rem;
+			width: 100%;
+			resize: vertical;
+			border-radius: 4px;
+		}
+		.contact-form button[type="submit"]{
+			display: block;
+			margin-top: 1rem;
+			background-color: #2079c7;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		function validateForm(){
+			var name = document.contact.name.value;
+			var message = document.contact.message.value;
+
+			if(name == "" || name.length <= 4){
+				alert('Name is invalid');
+				return false;
+			}else if(message == "" || message.length >= 20){
+				// alert('Message is invalid or message cannot take more 20 characters');
+				console.log(message);
+				return false;
+			}
+
+		}	
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div>
+			<img id="image" 
+			src="https://res.cloudinary.com/dekillerj/image/upload/v1554308635/IMG_20170413_194324_332.jpg" 
+			alt="me">
+		</div>
+		<div>
+			<h1>Iwaloye Samuel Olawale</h1>
+			<h3>Front-end Web Developer</h3>
+					<p id="address-paragraph">5, Ire Akari Estate, Omo oba bus Stop, Ori-Okuta, Agric,<br>
+						Ikorodu,<br>
+						Lagos State.<br>
+						08134437871, 08178115769<br>
+						Iwaloyeo@gmail.com<br>
+					</p>
+					<button><a href="#contact-me">Contact me!</a></button>	
+		</div>
+	</div>
+	<table class="container" cellspacing="0" cellpadding="15" >
+		<tr>
+			<td class="empty"></td>
+			<td id="experience-container"><h2>EXPERIENCE</h2><br>
+				<p class="content">Jarrisoft Solutions Limited, Ikorodu, Lagos - <i>Intern</i><br>
+					January 2019 - PRESENT<br>
+					Learning how to efficiently develop websites and web applications.<br>
+				</p>
+				<p class="content">
+						International Data Management Services,Ikeja, Lagos - <i>IT intern</i><br>
+						April  2018 - September 2018<br>
+						<ul>
+						<li>Installation of Computer hardware and Softwares.</li>
+						<li>Setup of Computer Labs for offices and schools.</li>
+						</ul>
+					</p>
+			</td>
+			<td class="skills"><h2>SKILLS</h2><br>
+						<br>
+						<ul>
+							<li>Computer Literate with proficiency in Microsoft Office, Desktop Publishing.</li>
+							<li>Able to learn quickly.</li>
+							<li>Proficient in HTML and CSS.</li>
+							<li>Able to work effectively  alone and with a team.</li>
+							<li>Good communication and managerial skills.</li>
+							<li>Able to work well under pressure and time deadlines.</li>
+						</ul>
+			</td>
+			<td class="empty"></td>
+		</tr>
+	</table>
+	<table class="container" cellspacing="0" cellpadding="15"> 
+		<tr>
+			<td class="empty"></td>
+			<td id="education"><h2>EDUCATION</h2><br>
+				<p>University of Benin, Benin City, Edo State - Bachelors Degree<br>
+					January 2014 - October 2018.</p>
+				<p>Jimson International College,  Ayetoro, Ogun State - School Certificate<br>
+					September 2007 - July 2013</p>
+				<p>Queen Care International School,  Mosan, Lagos State - Primary School leaving certificate<br>
+					January 1999 - August 2007</p>
+			</td>
+			<td class="container"><h2>AWARDS</h2>
+				<p> IVOL Scholarship Winner through ScholarX - 2018</p>
+				<hr>
+				<h2>LANGUAGES</h2>
+				<p>English, Yoruba.</p>
+			</td>
+			<td class="empty"></td>
+		</tr>
+	</table>
+	<div id="contact-me">
+		<h1 class="contact-form__title">Contact me!</h1>
+		<form name="contact" method="post" action="#" class="contact-form" onsubmit="return validateForm()">
+			<label for="name">Full Name</label>
+			<input name="name" type="text" placeholder="Your Name" id="name">
+			<label for="email">Email</label>
+			<input name="email" type="email" placeholder="Email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" placeholder="Enter your message" id="message"></textarea>
+			<button class="submit" type="submit">Send</button>
+		</form>
+	</div>
+</body>
+</html>
