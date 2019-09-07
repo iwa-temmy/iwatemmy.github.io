@@ -16,7 +16,7 @@
 		}
 		#header{
 			width: 100%;
-			height: 27rem;
+			height: 25rem;
 			background:#2079c7;
 			text-align: center;
 			padding: 1rem;
@@ -53,21 +53,8 @@
 			margin: 0;
 			padding: 0;
 			color: white;
-			margin-bottom: 1rem;
 		}
-		button{
-			padding:0.3rem;
-			margin:auto;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-		}
-		button a { 
-			text-decoration: none;
-		}
-		button:hover{
-			background: white;
-		}
+		
 		.empty{
 			width: 10%;
 		}
@@ -143,12 +130,11 @@
 			var name = document.contact.name.value;
 			var message = document.contact.message.value;
 
-			if(name == "" || name.length <= 4){
+			if(name =="" || name.length <= 4){
 				alert('Name is invalid');
 				return false;
-			}else if(message == "" || message.length >= 20){
-				// alert('Message is invalid or message cannot take more 20 characters');
-				console.log(message);
+			}else if(message =="" || message.length <= 20){
+				alert('Message is invalid or message cannot take more 20 characters');
 				return false;
 			}
 
@@ -225,16 +211,16 @@
 			<td class="empty"></td>
 		</tr>
 	</table>
-	<div id="contact-me">
+	<div>
 		<h1 class="contact-form__title">Contact me!</h1>
-		<form name="contact" method="post" action="#" class="contact-form" onsubmit="return validateForm()">
-			<label for="name">Full Name</label>
+		<form name="contact" method="post" action="send.php" class="contact-form" onsubmit="return validateForm()">
+			<label for="name">Name</label>
 			<input name="name" type="text" placeholder="Your Name" id="name">
 			<label for="email">Email</label>
 			<input name="email" type="email" placeholder="Email" id="email">
 			<label for="message">Message</label>
 			<textarea name="message" placeholder="Enter your message" id="message"></textarea>
-			<button class="submit" type="submit">Send</button>
+			<button class="submit" name="submit" type="submit">Send</button>
 		</form>
 	</div>
 </body>
